@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <!--RESET Link-->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!--BOOTSTRAP link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!--JQUERY Css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+      integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--MAIN Css-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+<header class="">
+    <h1>Weather Dashboard</h1>
+</header>
+<!--Main Container-->
+<section class="col d-flex flex-wrap">
+<!--Aside nav bar with buttons-->
+<aside class="col-3 m-2">
+<nav class="row navbar bg-body-tertiary">    
+    <h2>Search for a City:</h2>
+      <form class="" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success w-100" type="submit">Search</button>
+      </form>    
+  </nav>
+  <div class="row">
+  <button type="button" class="btn btn-secondary mt-2">Atlanta</button>
+  <button type="button" class="btn btn-secondary mt-2">Denver</button>
+  <button type="button" class="btn btn-secondary mt-2">Seattle</button>
+  <button type="button" class="btn btn-secondary mt-2">San Francisco</button>
+  <button type="button" class="btn btn-secondary mt-2">Orlando</button>
+  <button type="button" class="btn btn-secondary mt-2">New York</button>
+  <button type="button" class="btn btn-secondary mt-2">Chicago</button>
+  <button type="button" class="btn btn-secondary mt-2">Austin</button>
+</div>
+</aside>
+<!------------------------------->
+<!--Section Container-->
+<section class="bg-danger-subtle w-100">
+<!--Data display-->
+<div class="card">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Atlanta (data date here) <span>icon</span></h5>
+      <p class="card-text">Temp: <span>data temperature here</span>.</p>
+      <p class="card-text">Wind: <span>data wind here</span></p>
+      <p class="card-text">Humedity: <span>data wind here</span></p>
+    </div>
+  </div>
+
+  <!--Section Cards-->
+  <section class="">
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Secondary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+</section>
+<!-----------END CARDS--------------->
+</section>
+</section>
+
+    <!--BOOTSTRAP Script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!--JQUERY Script-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+      integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--MAIN Script-->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
