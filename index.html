@@ -25,88 +25,124 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-<header class="">
-    <h1>Weather Dashboard</h1>
-</header>
-<!--Main Container-->
-<section class="col d-flex flex-wrap">
-<!--Aside nav bar with buttons-->
-<aside class="col-3 m-2">
-<nav class="row navbar bg-body-tertiary">    
-    <h2>Search for a City:</h2>
-      <form class="" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success w-100" type="submit">Search</button>
-      </form>    
-  </nav>
-  <div class="row">
-  <button type="button" class="btn btn-secondary mt-2">Atlanta</button>
-  <button type="button" class="btn btn-secondary mt-2">Denver</button>
-  <button type="button" class="btn btn-secondary mt-2">Seattle</button>
-  <button type="button" class="btn btn-secondary mt-2">San Francisco</button>
-  <button type="button" class="btn btn-secondary mt-2">Orlando</button>
-  <button type="button" class="btn btn-secondary mt-2">New York</button>
-  <button type="button" class="btn btn-secondary mt-2">Chicago</button>
-  <button type="button" class="btn btn-secondary mt-2">Austin</button>
-</div>
-</aside>
-<!------------------------------->
-<!--Section Container-->
-<section class="bg-danger-subtle w-100">
-<!--Data display-->
-<div class="card">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Atlanta (data date here) <span>icon</span></h5>
-      <p class="card-text">Temp: <span>data temperature here</span>.</p>
-      <p class="card-text">Wind: <span>data wind here</span></p>
-      <p class="card-text">Humedity: <span>data wind here</span></p>
-    </div>
-  </div>
+    <header class="d-flex justify-content-center">
+      <h1>Weather Dashboard</h1>
+    </header>
+    <!--Main Container-->
+    <section class="row d-flex flex-wrap justify-content-evenly">
+      <!--Aside nav bar with buttons-->
+      <aside class="col-2 mt-2">
+        <nav class="row navbar bg-body-tertiary">
+          <h3>Search for a City:</h3>
+          <form id="#" role="search">
+            <input
+              class="col-12 form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="col-12 btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </nav>
+        <div class="row">
+          <button type="button" class="btn btn-secondary mt-2">Atlanta</button>
+          <button type="button" class="btn btn-secondary mt-2">Denver</button>
+          <button type="button" class="btn btn-secondary mt-2">Seattle</button>
+          <button type="button" class="btn btn-secondary mt-2">
+            San Francisco
+          </button>
+          <button type="button" class="btn btn-secondary mt-2">Orlando</button>
+          <button type="button" class="btn btn-secondary mt-2">New York</button>
+          <button type="button" class="btn btn-secondary mt-2">Chicago</button>
+          <button type="button" class="btn btn-secondary mt-2">Austin</button>
+        </div>
+      </aside>
+      <!------------------------------->
+      <!--Section Container-->
+      <section class="col-9 m-2">
+        <!--Data display-->
+        <div class="card mb-3">
+          <div class="card-header">Featured</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              Atlanta (data date here) <span>icon</span>
+            </h5>
+            <p class="card-text">Temp: <span>data temperature here</span>.</p>
+            <p class="card-text">Wind: <span>data wind here</span></p>
+            <p class="card-text">Humedity: <span>data wind here</span></p>
+          </div>
+        </div>
 
-  <!--Section Cards-->
-  <section class="">
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Secondary card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Secondary card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Secondary card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Secondary card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-  <div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
-    <div class="card-body">
-      <h5 class="card-title">Secondary card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-</section>
-<!-----------END CARDS--------------->
-</section>
-</section>
+        <!--Section Cards-->
+        <section class="d-flex justify-content-between flex-wrap">
+          <h3 class="col-12">5-Day Forecast</h3>
+          <div
+            class="col-2 card text-bg-secondary custom-card"
+            style="max-width: 18rem"
+          >
+            <div class="card-header">MM/DD/YYYY</div>
+            <div class="card-body">
+                <h5 class="card-title"> <i>icon</i></h5>
+              <p class="card-text">Temp: <span>Data</span></p>
+              <p class="card-text">Wind: <span>Data</span></p>
+              <p class="card-text">Humidity: <span>Data</span></p>
+            </div>
+          </div>
+          <div
+            class="col-2 card text-bg-secondary custom-card"
+            style="max-width: 18rem"
+          >
+            <div class="card-header">MM/DD/YYYY</div>
+            <div class="card-body">
+                <h5 class="card-title"> <i>icon</i></h5>
+                <p class="card-text">Temp: <span>Data</span></p>
+                <p class="card-text">Wind: <span>Data</span></p>
+                <p class="card-text">Humidity: <span>Data</span></p>
+            </div>
+          </div>
+          <div
+            class="col-2 card text-bg-secondary custom-card"
+            style="max-width: 18rem"
+          >
+            <div class="card-header">MM/DD/YYYY</div>
+            <div class="card-body">
+                <h5 class="card-title"> <i>icon</i></h5>
+                <p class="card-text">Temp: <span>Data</span></p>
+                <p class="card-text">Wind: <span>Data</span></p>
+                <p class="card-text">Humidity: <span>Data</span></p>
+            </div>
+          </div>
+          <div
+            class="col-2 card text-bg-secondary custom-card"
+            style="max-width: 18rem"
+          >
+            <div class="card-header">MM/DD/YYYY</div>
+            <div class="card-body">
+                <h5 class="card-title"> <i>icon</i></h5>
+                <p class="card-text">Temp: <span>Data</span></p>
+                <p class="card-text">Wind: <span>Data</span></p>
+                <p class="card-text">Humidity: <span>Data</span></p>
+            </div>
+          </div>
+          <div
+            class="col-2 card text-bg-secondary custom-card"
+            style="max-width: 18rem"
+          >
+            <div class="card-header">MM/DD/YYYY</div>
+            <div class="card-body">
+               
+              <h5 class="card-title"> <i>icon</i></h5>
+              <p class="card-text">Temp: <span>Data</span></p>
+              <p class="card-text">Wind: <span>Data</span></p>
+              <p class="card-text">Humidity: <span>Data</span></p>
+            </div>
+          </div>
+        </section>
+        <!-----------END CARDS--------------->
+      </section>
+    </section>
 
     <!--BOOTSTRAP Script-->
     <script
