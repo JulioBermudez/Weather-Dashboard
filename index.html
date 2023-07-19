@@ -13,14 +13,6 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <!--JQUERY Css-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
-      integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <!--MAIN Css-->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -47,16 +39,16 @@
           </form>
         </nav>
         <div class="row">
-          <button type="button" class="btn btn-secondary mt-2">Atlanta</button>
-          <button type="button" class="btn btn-secondary mt-2">Denver</button>
-          <button type="button" class="btn btn-secondary mt-2">Seattle</button>
-          <button type="button" class="btn btn-secondary mt-2">
+          <button type="button" id="atlantaBtn" class="btn btn-secondary mt-2">Atlanta</button>
+          <button type="button" id="denverBtn" class="btn btn-secondary mt-2">Denver</button>
+          <button type="button" id="seattleBtn" class="btn btn-secondary mt-2">Seattle</button>
+          <button type="button" id="sanFranciscoBtn" class="btn btn-secondary mt-2">
             San Francisco
           </button>
-          <button type="button" class="btn btn-secondary mt-2">Orlando</button>
-          <button type="button" class="btn btn-secondary mt-2">New York</button>
-          <button type="button" class="btn btn-secondary mt-2">Chicago</button>
-          <button type="button" class="btn btn-secondary mt-2">Austin</button>
+          <button type="button" id="orlandoBtn" class="btn btn-secondary mt-2">Orlando</button>
+          <button type="button" id="newYorkBtn" class="btn btn-secondary mt-2">New York</button>
+          <button type="button" id="chicagoBtn" class="btn btn-secondary mt-2">Chicago</button>
+          <button type="button" id="austinBtn" class="btn btn-secondary mt-2">Austin</button>
         </div>
       </aside>
       <!------------------------------->
@@ -64,14 +56,13 @@
       <section class="col-9 m-2">
         <!--Data display-->
         <div class="card mb-3">
-          <div class="card-header">Featured</div>
+          <div id="cityName" class="card-header"></div>
           <div class="card-body">
-            <h5 class="card-title">
-              Atlanta (data date here) <span>icon</span>
+            <h5 class="card-title"><span>icon</span>
             </h5>
-            <p class="card-text">Temp: <span>data temperature here</span>.</p>
-            <p class="card-text">Wind: <span>data wind here</span></p>
-            <p class="card-text">Humedity: <span>data wind here</span></p>
+            <p class="card-text">Temp: <span id="temp"></span>.</p>
+            <p class="card-text">Wind: <span id="wind" ></span></p>
+            <p class="card-text">Humidity: <span id="humidity"></span></p>
           </div>
         </div>
 
@@ -82,73 +73,71 @@
             class="col-2 card text-bg-secondary custom-card"
             style="max-width: 18rem"
           >
-            <div class="card-header">MM/DD/YYYY</div>
+            <div id="d1Date" class="card-header"></div>
             <div class="card-body">
-                <h5 class="card-title"> <i>icon</i></h5>
-              <p class="card-text">Temp: <span>Data</span></p>
-              <p class="card-text">Wind: <span>Data</span></p>
-              <p class="card-text">Humidity: <span>Data</span></p>
+              <h5 class="card-title"><i>icon</i></h5>
+              <p class="card-text">Temp: <span id="d1Temp"></span></p>
+              <p class="card-text">Wind: <span id="d1Wind"></span></p>
+              <p class="card-text">Humidity: <span id="d1Humidity"></span></p>
             </div>
           </div>
           <div
             class="col-2 card text-bg-secondary custom-card"
             style="max-width: 18rem"
           >
-            <div class="card-header">MM/DD/YYYY</div>
+            <div id="d2Date" class="card-header"></div>
             <div class="card-body">
-                <h5 class="card-title"> <i>icon</i></h5>
-                <p class="card-text">Temp: <span>Data</span></p>
-                <p class="card-text">Wind: <span>Data</span></p>
-                <p class="card-text">Humidity: <span>Data</span></p>
+              <h5 class="card-title"><i>icon</i></h5>
+              <p class="card-text">Temp: <span id="d2Temp"></span></p>
+              <p class="card-text">Wind: <span id="d2Wind" ></span></p>
+              <p class="card-text">Humidity: <span id="d2Humidity"></span></p>
             </div>
           </div>
           <div
             class="col-2 card text-bg-secondary custom-card"
             style="max-width: 18rem"
           >
-            <div class="card-header">MM/DD/YYYY</div>
+            <div id="d3Date" class="card-header">MM/DD/YYYY</div>
             <div class="card-body">
-                <h5 class="card-title"> <i>icon</i></h5>
-                <p class="card-text">Temp: <span>Data</span></p>
-                <p class="card-text">Wind: <span>Data</span></p>
-                <p class="card-text">Humidity: <span>Data</span></p>
+              <h5 class="card-title"><i>icon</i></h5>
+              <p class="card-text">Temp: <span id="d3Temp"></span></p>
+              <p class="card-text">Wind: <span id="d3Wind"></span></p>
+              <p class="card-text">Humidity: <span id="d3Humidity"></span></p>
             </div>
           </div>
           <div
             class="col-2 card text-bg-secondary custom-card"
             style="max-width: 18rem"
           >
-            <div class="card-header">MM/DD/YYYY</div>
-            <div class="card-body">
-                <h5 class="card-title"> <i>icon</i></h5>
-                <p class="card-text">Temp: <span>Data</span></p>
-                <p class="card-text">Wind: <span>Data</span></p>
-                <p class="card-text">Humidity: <span>Data</span></p>
-            </div>
+          <div id="d4Date" class="card-header">MM/DD/YYYY</div>
+          <div class="card-body">
+            <h5 class="card-title"><i>icon</i></h5>
+            <p class="card-text">Temp: <span id="d4Temp"></span></p>
+            <p class="card-text">Wind: <span id="d4Wind"></span></p>
+            <p class="card-text">Humidity: <span id="d4Humidity"></span></p>
+          </div>
           </div>
           <div
             class="col-2 card text-bg-secondary custom-card"
             style="max-width: 18rem"
           >
-            <div class="card-header">MM/DD/YYYY</div>
+            <div id="d5Date" class="card-header">MM/DD/YYYY</div>
             <div class="card-body">
-               
-              <h5 class="card-title"> <i>icon</i></h5>
-              <p class="card-text">Temp: <span>Data</span></p>
-              <p class="card-text">Wind: <span>Data</span></p>
-              <p class="card-text">Humidity: <span>Data</span></p>
+              <h5 class="card-title"><i>icon</i></h5>
+              <p class="card-text">Temp: <span id="d5Temp"></span></p>
+              <p class="card-text">Wind: <span id="d5Wind"></span></p>
+              <p class="card-text">Humidity: <span id="d5Humidity"></span></p>
             </div>
           </div>
         </section>
         <!-----------END CARDS--------------->
       </section>
     </section>
-
-    <!--BOOTSTRAP Script-->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
     <!--JQUERY Script-->
     <script
@@ -156,6 +145,12 @@
       integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    ></script>
+    <!--BOOTSTRAP Script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
     ></script>
     <!--MAIN Script-->
     <script src="./assets/js/script.js"></script>
