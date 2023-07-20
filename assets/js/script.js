@@ -288,90 +288,90 @@ function denverGetApi() {
    }  
 
    //Chicago
-   function newYorkGetApi() {
-    fetch(newYorkApi)
+   function chicagoGetApi() {
+    fetch(chicagoApi)
     .then(function (response) {
       return response.json();
     })
-    .then(function (newYorkData) {     
+    .then(function (chicagoData) {     
         //Data Display
         $("#cityName").text(
-            newYorkData.city.name + " (" + newYorkData.list[0].dt_txt + ")"
+            chicagoData.city.name + " (" + chicagoData.list[0].dt_txt + ")"
         );
-        $("#temp").text(newYorkData.list[0].main.temp + " °F");
-        $("#wind").text(newYorkData.list[0].wind.speed + " MPH");
-        $("#humidity").text(newYorkData.list[0].main.humidity + " %");
+        $("#temp").text(chicagoData.list[0].main.temp + " °F");
+        $("#wind").text(chicagoData.list[0].wind.speed + " MPH");
+        $("#humidity").text(chicagoData.list[0].main.humidity + " %");
         //Section Cards
         //Day one
-        $("#d1Date").text(newYorkData.list[8].dt_txt);
-        $("#d1Temp").text(newYorkData.list[8].main.temp + " °F");
-        $("#d1Wind").text(newYorkData.list[8].wind.speed + " MPH");
-        $("#d1Humidity").text(newYorkData.list[8].main.humidity + " %");
+        $("#d1Date").text(chicagoData.list[8].dt_txt);
+        $("#d1Temp").text(chicagoData.list[8].main.temp + " °F");
+        $("#d1Wind").text(chicagoData.list[8].wind.speed + " MPH");
+        $("#d1Humidity").text(chicagoData.list[8].main.humidity + " %");
         //Day Two
-        $("#d2Date").text(newYorkData.list[16].dt_txt);
-        $("#d2Temp").text(newYorkData.list[16].main.temp + " °F");
-        $("#d2Wind").text(newYorkData.list[16].wind.speed + " MPH");
-        $("#d2Humidity").text(newYorkData.list[16].main.humidity + " %");
+        $("#d2Date").text(chicagoData.list[16].dt_txt);
+        $("#d2Temp").text(chicagoData.list[16].main.temp + " °F");
+        $("#d2Wind").text(chicagoData.list[16].wind.speed + " MPH");
+        $("#d2Humidity").text(chicagoData.list[16].main.humidity + " %");
         //Day Three
-        $("#d3Date").text(newYorkData.list[24].dt_txt);
-        $("#d3Temp").text(newYorkData.list[24].main.temp + " °F");
-        $("#d3Wind").text(newYorkData.list[24].wind.speed + " MPH");
-        $("#d3Humidity").text(newYorkData.list[24].main.humidity + " %");
+        $("#d3Date").text(chicagoData.list[24].dt_txt);
+        $("#d3Temp").text(chicagoData.list[24].main.temp + " °F");
+        $("#d3Wind").text(chicagoData.list[24].wind.speed + " MPH");
+        $("#d3Humidity").text(chicagoData.list[24].main.humidity + " %");
         //Day Four
-        $("#d4Date").text(newYorkData.list[32].dt_txt);
-        $("#d4Temp").text(newYorkData.list[32].main.temp + " °F");
-        $("#d4Wind").text(newYorkData.list[32].wind.speed + " MPH");
-        $("#d4Humidity").text(newYorkData.list[32].main.humidity + " %");
+        $("#d4Date").text(chicagoData.list[32].dt_txt);
+        $("#d4Temp").text(chicagoData.list[32].main.temp + " °F");
+        $("#d4Wind").text(chicagoData.list[32].wind.speed + " MPH");
+        $("#d4Humidity").text(chicagoData.list[32].main.humidity + " %");
         //Day Five
-        $("#d5Date").text(newYorkData.list[39].dt_txt);
-        $("#d5Temp").text(newYorkData.list[39].main.temp + " °F");
-        $("#d5Wind").text(newYorkData.list[39].wind.speed + " MPH");
-        $("#d5Humidity").text(newYorkData.list[39].main.humidity + " %");
+        $("#d5Date").text(chicagoData.list[39].dt_txt);
+        $("#d5Temp").text(chicagoData.list[39].main.temp + " °F");
+        $("#d5Wind").text(chicagoData.list[39].wind.speed + " MPH");
+        $("#d5Humidity").text(chicagoData.list[39].main.humidity + " %");
       
     });
     
    }  
 
    //Austin
-   function newYorkGetApi() {
-    fetch(newYorkApi)
+   function austinGetApi() {
+    fetch(austinApi)
     .then(function (response) {
       return response.json();
     })
-    .then(function (newYorkData) {     
+    .then(function (austinData) {     
         //Data Display
         $("#cityName").text(
-            newYorkData.city.name + " (" + newYorkData.list[0].dt_txt + ")"
+            austinData.city.name + " (" + austinData.list[0].dt_txt + ")"
         );
-        $("#temp").text(newYorkData.list[0].main.temp + " °F");
-        $("#wind").text(newYorkData.list[0].wind.speed + " MPH");
-        $("#humidity").text(newYorkData.list[0].main.humidity + " %");
+        $("#temp").text(austinData.list[0].main.temp + " °F");
+        $("#wind").text(austinData.list[0].wind.speed + " MPH");
+        $("#humidity").text(austinData.list[0].main.humidity + " %");
         //Section Cards
         //Day one
-        $("#d1Date").text(newYorkData.list[8].dt_txt);
-        $("#d1Temp").text(newYorkData.list[8].main.temp + " °F");
-        $("#d1Wind").text(newYorkData.list[8].wind.speed + " MPH");
-        $("#d1Humidity").text(newYorkData.list[8].main.humidity + " %");
+        $("#d1Date").text(austinData.list[8].dt_txt);
+        $("#d1Temp").text(austinData.list[8].main.temp + " °F");
+        $("#d1Wind").text(austinData.list[8].wind.speed + " MPH");
+        $("#d1Humidity").text(austinData.list[8].main.humidity + " %");
         //Day Two
-        $("#d2Date").text(newYorkData.list[16].dt_txt);
-        $("#d2Temp").text(newYorkData.list[16].main.temp + " °F");
-        $("#d2Wind").text(newYorkData.list[16].wind.speed + " MPH");
-        $("#d2Humidity").text(newYorkData.list[16].main.humidity + " %");
+        $("#d2Date").text(austinData.list[16].dt_txt);
+        $("#d2Temp").text(austinData.list[16].main.temp + " °F");
+        $("#d2Wind").text(austinData.list[16].wind.speed + " MPH");
+        $("#d2Humidity").text(austinData.list[16].main.humidity + " %");
         //Day Three
-        $("#d3Date").text(newYorkData.list[24].dt_txt);
-        $("#d3Temp").text(newYorkData.list[24].main.temp + " °F");
-        $("#d3Wind").text(newYorkData.list[24].wind.speed + " MPH");
-        $("#d3Humidity").text(newYorkData.list[24].main.humidity + " %");
+        $("#d3Date").text(austinData.list[24].dt_txt);
+        $("#d3Temp").text(austinData.list[24].main.temp + " °F");
+        $("#d3Wind").text(austinData.list[24].wind.speed + " MPH");
+        $("#d3Humidity").text(austinData.list[24].main.humidity + " %");
         //Day Four
-        $("#d4Date").text(newYorkData.list[32].dt_txt);
-        $("#d4Temp").text(newYorkData.list[32].main.temp + " °F");
-        $("#d4Wind").text(newYorkData.list[32].wind.speed + " MPH");
-        $("#d4Humidity").text(newYorkData.list[32].main.humidity + " %");
+        $("#d4Date").text(austinData.list[32].dt_txt);
+        $("#d4Temp").text(austinData.list[32].main.temp + " °F");
+        $("#d4Wind").text(austinData.list[32].wind.speed + " MPH");
+        $("#d4Humidity").text(austinData.list[32].main.humidity + " %");
         //Day Five
-        $("#d5Date").text(newYorkData.list[39].dt_txt);
-        $("#d5Temp").text(newYorkData.list[39].main.temp + " °F");
-        $("#d5Wind").text(newYorkData.list[39].wind.speed + " MPH");
-        $("#d5Humidity").text(newYorkData.list[39].main.humidity + " %");
+        $("#d5Date").text(austinData.list[39].dt_txt);
+        $("#d5Temp").text(austinData.list[39].main.temp + " °F");
+        $("#d5Wind").text(austinData.list[39].wind.speed + " MPH");
+        $("#d5Humidity").text(austinData.list[39].main.humidity + " %");
       
     });
     
