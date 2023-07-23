@@ -1,17 +1,236 @@
-var atlantaApi =
-  "https://api.openweathermap.org/data/2.5/forecast?q=Atlanta&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
-var denverApi =
-  "https://api.openweathermap.org/data/2.5/forecast?q=Denver&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
-var seattleApi =
-  "https://api.openweathermap.org/data/2.5/forecast?q=Seattle&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
-var sanFranciscoApi = "https://api.openweathermap.org/data/2.5/forecast?q=Francisco&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
-var orlandoApi =
-  "https://api.openweathermap.org/data/2.5/forecast?q=Orlando&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
-var newYorkApi = "https://api.openweathermap.org/data/2.5/forecast?q=York&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
-var chicagoApi =
-  "https://api.openweathermap.org/data/2.5/forecast?q=Chicago&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
-var austinApi = "https://api.openweathermap.org/data/2.5/forecast?q=Austin&appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
 
+var api =
+  "https://api.openweathermap.org/data/2.5/forecast?q= &appid=eca7da31468c16ddffa7abce668f3014&units=imperial";
+api = api.split(" ");
+var cityName = [
+  "Atlanta",
+  "Denver",
+  "Seattle",
+  "san%20francisco",
+  "Orlando",
+  "new%20york",
+  "Chicago",
+  "Austin",
+];
+
+
+
+$("#btnSelector").click(function(event){
+  event.stopPropagation()
+
+  if ($(event.target).attr("name") === "atlanta") {
+    
+   fetch(api[0] + cityName[0] + api[1]).then(function(response){
+    if (response.ok) {
+      response.json().then(function (data) {
+       dataManagment(data)
+       console.log(data);
+      })
+      
+    }
+   })
+    
+
+
+  }else if ($(event.target).attr("name") === "denver"){
+
+    fetch(api[0] + cityName[1] + api[1]).then(function(response){
+      if (response.ok) {
+        response.json().then(function (data) {
+          dataManagment(data)
+          console.log(data);
+        })
+      }
+     })
+    
+     
+  }else if ($(event.target).attr("name") === "seattle") {
+    
+    fetch(api[0] + cityName[2] + api[1]).then(function(response){
+      if (response.ok) {
+        response.json().then(function (data) {
+          dataManagment(data)
+          console.log(data);
+        })
+      }
+     })
+
+
+  }else if ($(event.target).attr("name") === "sanFrancisco") {
+  
+    fetch(api[0] + cityName[3] + api[1]).then(function(response){
+      if (response.ok) {
+        response.json().then(function (data) {
+          dataManagment(data)
+          console.log(data);
+          
+        })
+      }
+     })
+
+
+  }else if ($(event.target).attr("name") === "orlando") {
+    
+    fetch(api[0] + cityName[4] + api[1]).then(function(response){
+      if (response.ok) {
+        response.json().then(function (data) {
+          dataManagment(data)
+          console.log(data);
+          
+        })
+      }
+     })
+
+
+  }else if ($(event.target).attr("name") === "newYork") {
+    
+    fetch(api[0] + cityName[5] + api[1]).then(function(response){
+      if (response.ok) {
+        response.json().then(function (data) {
+          dataManagment(data)
+          console.log(data);
+          
+        })
+      }
+     })
+
+
+  }else if ($(event.target).attr("name") === "chicago") {
+
+    fetch(api[0] + cityName[6] + api[1]).then(function(response){
+      if (response.ok) {
+        response.json().then(function (data) {
+          dataManagment(data)
+          console.log(data);
+          
+        })
+      }
+     })
+
+
+  }else if ($(event.target).attr("name") === "austin") {
+
+    fetch(api[0] + cityName[7] + api[1]).then(function(response){
+      if (response.ok) {
+        response.json().then(function (data) {
+          dataManagment(data)
+          console.log(data);
+          
+        })
+      }
+     })
+    // https://openweathermap.org/img/wn/icon@2x.png
+
+  }
+
+  
+  function dataManagment (data){
+    
+
+     for (let i = 0; i < 40; i += 8) {
+          var icon = data.list[i].weather[0].icon
+          var tempData = data.list[i].main.temp + " °F";
+          var speedData = data.list[i].wind.speed + " MPH";
+          var humidityData = data.list[i].main.humidity + " %";
+          if (i === 0) {
+            $("#cityName").text(
+              data.city.name + " (" + data.list[0].dt + ")"
+            );
+            $("#currentWeatherImg").attr("src","https://openweathermap.org/img/wn/"+icon+"@2x.png")
+            $("#temp").text(tempData);
+            $("#wind").text(speedData);
+            $("#humidity").text(humidityData);
+          } else if (i === 8) {
+            $("#day1WeatherImg").attr("src","https://openweathermap.org/img/wn/"+icon+"@2x.png")
+            $("#day1Temp").text(tempData);
+            $("#day1Wind").text(speedData);
+            $("#day1Humidity").text(humidityData);
+          } else if (i === 16) {
+            $("#day2WeatherImg").attr("src","https://openweathermap.org/img/wn/"+icon+"@2x.png")
+            $("#day2Temp").text(tempData);
+            $("#day2Wind").text(speedData);
+            $("#day2Humidity").text(humidityData);
+          } else if (i === 24) {
+            $("#day3WeatherImg").attr("src","https://openweathermap.org/img/wn/"+icon+"@2x.png")
+            $("#day3Temp").text(tempData);
+            $("#day3Wind").text(speedData);
+            $("#day3Humidity").text(humidityData);
+          } else if (i === 32) {
+            $("#day4WeatherImg").attr("src","https://openweathermap.org/img/wn/"+icon+"@2x.png")
+            $("#day4Temp").text(tempData);
+            $("#day4Wind").text(speedData);
+            $("#day4Humidity").text(humidityData);
+            
+            $("#day5WeatherImg").attr("src","https://openweathermap.org/img/wn/"+icon+"@2x.png")
+            $("#day5Temp").text(data.list[39].main.temp + " °F");
+            $("#day5Wind").text(data.list[39].wind.speed + " MPH");
+            $("#day5Humidity").text(data.list[39].main.humidity + " %");
+          }
+        }
+
+
+
+         }
+
+  
+    
+
+
+
+
+  })
+
+
+
+
+
+
+/*
+
+$("#atlantaBtn").on("click", function () {
+  fetch(api[0] + cityName[0] + api[1]).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data);
+        for (let i = 0; i < 40; i += 8) {
+          var tempData = data.list[i].main.temp + " °F";
+          var speedData = data.list[i].wind.speed + " MPH";
+          var humidityData = data.list[i].main.humidity + " %";
+          if (i === 0) {
+            $("#cityName").text(
+              data.city.name + " (" + data.list[0].dt + ")"
+            );
+            $("#temp").text(tempData);
+            $("#wind").text(speedData);
+            $("#humidity").text(humidityData);
+          } else if (i === 8) {
+            $("#d1Temp").text(tempData);
+            $("#d1Wind").text(speedData);
+            $("#d1Humidity").text(humidityData);
+          } else if (i === 16) {
+            $("#d2Temp").text(tempData);
+            $("#d2Wind").text(speedData);
+            $("#d2Humidity").text(humidityData);
+          } else if (i === 24) {
+            $("#d3Temp").text(tempData);
+            $("#d3Wind").text(speedData);
+            $("#d3Humidity").text(humidityData);
+          } else if (i === 32) {
+            $("#d4Temp").text(tempData);
+            $("#d4Wind").text(speedData);
+            $("#d4Humidity").text(humidityData);
+
+            $("#d5Temp").text(data.list[39].main.temp + " °F");
+            $("#d5Wind").text(data.list[39].wind.speed + " MPH");
+            $("#d5Humidity").text(data.list[39].main.humidity + " %");
+          }
+        }
+      });
+    }
+  });
+});
+*/
+/*
 var atlantaBtnEl = document.querySelector("#atlantaBtn");
 var denverBtnEl = document.querySelector("#denverBtn");
 var seattleBtnEl = document.querySelector("#seattleBtn");
@@ -20,6 +239,7 @@ var orlandoEl = document.querySelector("#orlandoBtn");
 var newYorkEl = document.querySelector("#newYorkBtn");
 var chicagoEl = document.querySelector("#chicagoBtn");
 var austinEl = document.querySelector("#austinBtn");
+
 
 function atlantaGetApi() {
  //Atlanta
@@ -389,4 +609,4 @@ orlandoEl.addEventListener("click", orlandoGetApi);
 newYorkEl.addEventListener("click", newYorkGetApi);
 chicagoEl.addEventListener("click", chicagoGetApi);
 austinEl.addEventListener("click",austinGetApi);
-  
+  */
