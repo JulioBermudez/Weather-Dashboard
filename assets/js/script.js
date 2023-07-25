@@ -4,33 +4,52 @@ api = api.split(" ");
 
 $("#submitBtn").on("click", function (event) {
   event.preventDefault();
+
   var cityName = $("#cityName").val().replace(" ", "%20");
   if (cityName) {
     fetch(api[0] + cityName + api[1]).then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
           dataManagement(data);
-
-          $("#btnSelector").append("<button>");
-          var btn = $("#btnSelector")
-            .children()
-            .addClass("btn btn-secondary mt-2")
-            .attr("value", cityName);
-          btn.text(cityName.replace("%20", " "));
-          console.log( $("#btnSelector", ".btn"));
+          console.log(data);
+          
         });
+      } else if (response.status !== 200) {
+        alert("Please enter a valid City Name");
+        return;
       }
-     
-
-
-
+      //create a dynamic button with the city name as search result
+      $("#btnSelector").append(
+        '<button id="' +
+          cityName +
+          '" class="btn btn-secondary mt-2" type="button">' +
+          cityName.replace("%20", " ") +
+          "</button>"
+      );
+        
+      //When the dynamic button if clicked it will show the weather data
+      // of the city name clicked
+      $("#btnSelector").click(function (event) {
+        event.stopPropagation();
+      
+        if ($(event.target).attr("id") == cityName) {
+          fetch(api[0] + $(event.target).attr("id") + api[1]).then(function (response) {
+            if (response.ok) {
+              response.json().then(function (data) {
+                dataManagement(data);
+                console.log(cityName);
+                console.log($(event.target).attr("id"));
+              });
+            };
+          });
+        };
+      });
+      /*-----------------------------------------------------------------------*/ 
     });
   } else {
     alert("Please enter a valid City Name");
   }
 });
-
-
 
 function dataManagement(data) {
   for (let i = 0; i < 40; i += 8) {
