@@ -12,7 +12,7 @@ A work day schedule refers to the specific hours and activities that make up a t
 👆Click Here 👆
 
 ## Usage
-![Work-Day-Sheduler](./Assets/images/127.0.0.1_5500_index.html%20(1).png)
+![Work-Day-Sheduler](./assets/images/127.0.0.1_5500_index.html%20(1).png)
 
 ## Instalation
 
